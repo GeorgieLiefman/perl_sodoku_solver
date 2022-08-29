@@ -13,3 +13,22 @@ my @board = qw(
     (1,2,0,0,0,7,4,0,0),
     (0,4,9,2,0,6,0,0,7)
 );
+
+sub display_board {
+    foreach my $x (1..8) {
+        if ($x % 3 == 0 and $x != 0) {
+            print("- - - - - - - - - - - - \n");
+        }
+
+        foreach my $y (1..8) {
+            if ($y % 3 == 0 and $y != 0) {
+                print(" | \n");
+            }
+        }
+    }
+}
+
+
+
+
+display_board()
